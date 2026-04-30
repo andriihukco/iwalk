@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "iWalk",
+    "slug": "iwalk",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.iwalk.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "iWalk використовує геолокацію для побудови маршруту та відстеження прогресу.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "iWalk використовує фонову геолокацію для відстеження маршруту, коли додаток згорнутий.",
+        "NSLocationAlwaysUsageDescription": "iWalk використовує фонову геолокацію для відстеження маршруту, коли додаток згорнутий."
+      },
+      "backgroundModes": [
+        "location",
+        "fetch"
+      ]
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.iwalk.app",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "iWalk використовує геолокацію для побудови та відстеження маршруту.",
+          "isAndroidBackgroundLocationEnabled": true
+        }
+      ]
+    ],
+    "scheme": "iwalk",
+    "extra": {
+      "eas": {
+        "projectId": "iwalk"
+      }
+    }
+  }
+}
